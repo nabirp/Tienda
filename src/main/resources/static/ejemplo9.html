@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>FORMULARIOSt</h1>
+        <br>
+        <br>
+        <br>
+        <a href="ejemplo8.html">Atrás</a>
+        <a href="ejemplo10.html">Adelante</a>
+        <br>
+        <br><!-- "action" cuando llene los datos o le de click, a que accion del servidor va a enviar esa informacion  -->
+         <!-- "metodos " get, post, put, estos por lo general llevan ese metodo porque los formularios son para
+         modificar o llenar algo-->
+         <form action="#"> <!-- method="POST"> --> 
+        <!-- label que es la etiqueta o texto que va a salir visual a la par de cada elemento, el titulo -->
+        <label>Nombre:</label>
+        <!-- "input" entrada -->
+        <!-- "placeholder" el texto del fondo de la caja de texto -->      
+        <input type="text" name="nombre" id="nombre" placeholder="Digite su nombre" />
+        
+        <label>Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" placeholder="Digite sus apellidos" />
+        
+        <label>Correo</label>
+        <!-- value="abc@gmail.com ", nos sirve pára precargar un texto, que ya aparezca pero se pueda borrar-->
+        <input type="email" name="correo" id="correo" /> <br>
+        
+        <!-- Envia los datos suministrado por el POST sin embargo no determinamos aun el servidor
+        entonces da error-->
+        <input type="submit" value="Enviar"/>
+         
+        HORA 2:32
+         </form>
+            
+    </body>
+</html>
