@@ -23,7 +23,7 @@ public class Categoria implements Serializable { //CONVIERTE EL OBJETO EN UN ARR
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column (name ="id_categoria")//este campo se comunica directamento con id_categoria
-    private int idCategoria;// Transformar en id_categoria, NO SE DEBEN PONER LOS GUION BAJO __
+    private Long idCategoria;// Transformar en id_categoria, NO SE DEBEN PONER LOS GUION BAJO __
     private String descripcion;
     private String rutaImagen;
     private boolean activo;
