@@ -1,10 +1,10 @@
-/*
-Creamos todas las entidades que se van a mapear contra nuestra base de datos
- */
+
+
 package com.Tienda.domain;
 
 import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import lombok.Data;
 
 //ANOTACIONES DEBEN IR PEGADAS AL PUBLIC, A LA PAR SIN RENGLONES
@@ -28,16 +28,19 @@ public class Categoria implements Serializable { //CONVIERTE EL OBJETO EN UN ARR
     private String rutaImagen;
     private boolean activo;
 
+    @OneToMany//De categorias a producto
+    @JoinColumn(name = "id_categoria")
+    private List<Producto> productos;
+
     //Constructor base
     public Categoria() {
 
     }
 //Constructor sobre cargado,TODO MENOS EL ID
+
     public Categoria(String descripcion, String rutaImagen, boolean activo) {
         this.descripcion = descripcion;
         this.rutaImagen = rutaImagen;
         this.activo = activo;
     }
-    
-    
 }

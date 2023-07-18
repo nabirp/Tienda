@@ -1,7 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+ 
 package com.Tienda.service.impl;
 
 import com.Tienda.dao.CategoriaDao;
@@ -11,10 +11,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- *
- * @author Nabir
- */
 public class CategoriaServiceImpl implements CategoriaService {
 
     @Autowired //Anotacion que nos permite crear una instancia de un elemento
@@ -52,3 +48,4 @@ public class CategoriaServiceImpl implements CategoriaService {
     }
 
 }
+*/
