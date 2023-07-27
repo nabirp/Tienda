@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- 
+
 package com.Tienda.service.impl;
 
 import com.Tienda.dao.CategoriaDao;
@@ -47,5 +44,10 @@ public class CategoriaServiceImpl implements CategoriaService {
         categoriaDao.delete(categoria);
     }
 
+    @Override
+    public List<Categoria> getPorDescripcion(String descripcion) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }
-*/
+

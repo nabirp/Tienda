@@ -4,14 +4,14 @@
  */
 package com.Tienda.dao;
 
-import com.Tienda.domain.Categoria;
-import java.util.List;
+import com.Tienda.domain.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author Nabir
  */
-public interface CategoriaDao extends JpaRepository<Categoria, Long>{
-    List<Categoria>findByDescription(String descripcion);
+public interface UsuarioDao extends JpaRepository<Usuario, Long> {
+    
+    Usuario findByUsername(String username);
 }

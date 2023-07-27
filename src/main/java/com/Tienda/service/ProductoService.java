@@ -24,6 +24,9 @@ public interface ProductoService {
     public void save (Producto producto);
     
     //Se elimina un registro por su idProducto
-    
     public void delete(Producto producto);
+
+// Lista de productos con precio entre ordendados por descripción ConsultaAmpliada
+    public List<Producto> findByPrecioBetweenOrderByDescripcion(double precioInf, double precioSup);
+
 }

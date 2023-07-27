@@ -5,6 +5,7 @@
 package com.Tienda.dao;
 
 import com.Tienda.domain.Producto;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -12,5 +13,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author Nabir
  */
 public interface ProductoDao extends JpaRepository<Producto, Long>{
-    
+    //Ejemplo de método utilizando Métodos de Query
+    //El between me permite buscar valores en un rango
+public List<Producto> findByPrecioBetweenOrderByDescripcion(double precioInf, double precioSup);
 }

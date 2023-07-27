@@ -17,7 +17,8 @@ public class IndexController {
     
     @RequestMapping("/url")
     public String page(Model model) {
-        model.addAttribute("attribute", "value");
+        Object principal=SecurityContextHolder.getContext().getAuthe
+                ntication()getPrincipal();
         return "index";
     }
     
