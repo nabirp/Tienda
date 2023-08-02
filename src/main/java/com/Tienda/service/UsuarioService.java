@@ -4,10 +4,10 @@
  */
 package com.Tienda.service;
 
-/**
- *
- * @author Nabir
- */
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
 public interface UsuarioService {
     
+    public UserDetails LOADuSERbYuSERNAME (String username) throws UsernameNotFoundException;
 }

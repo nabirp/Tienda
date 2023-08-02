@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/springframework/Controller.java to edit this template
- */
+
 package com.Tienda.domain;
 
 import com.google.firebase.database.annotations.NotNull;
@@ -10,8 +7,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.io.Serializable;
+import java.util.List;
+import javax.validation.constraints.NotEmpty;
 import lombok.Data;
 
 
@@ -40,7 +41,8 @@ public class Usuario implements Serializable{
     private String rutaImangen;
     private boolean activo;
     
-    
-    
-    
+    @OneToMany
+    @JoinColumn(name="id_usuario")
+    private List <Rol>roles;
+   
 }

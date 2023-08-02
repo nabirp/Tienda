@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.io.Serializable;
+import javax.validation.constraints.NotEmpty;
 import lombok.Data;
 
 
@@ -18,12 +19,10 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name ="rol")
-
 public class Rol implements Serializable {
+   private static final long serialVersionUID = 1L;
 
-    private static final long serialVersionUID = 1L;
-
-    @Id
+    @Id //nota para decirle que es el id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "in_rol")
     private Long idRol;
@@ -32,10 +31,5 @@ public class Rol implements Serializable {
     private String nombre;
 
     @Column(name = "id_usuario")
-    
-
-}
-
-
-
-
+    private Long idUsuario;
+    }

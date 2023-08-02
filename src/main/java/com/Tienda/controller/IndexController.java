@@ -4,6 +4,7 @@
  */
 package com.Tienda.controller;
 
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +18,8 @@ public class IndexController {
     
     @RequestMapping("/url")
     public String page(Model model) {
-        Object principal=SecurityContextHolder.getContext().getAuthe
-                ntication()getPrincipal();
+        Object principal= SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+       
         return "index";
     }
     

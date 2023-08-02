@@ -15,14 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/springframework/Controller.java to edit this template
- */
-
-
-
-
 @Controller
 @RequestMapping("/producto")
 public class ProductoController {
@@ -52,8 +44,7 @@ public class ProductoController {
         return "/producto/modifica";
     }
 
-    @Autowired
-    private FirebaseStorageServiceImpl firebaseStorageService;
+
 //El PostMapping permite enviar datos en el cuerpo de la peticion, van los datos de la categoria 
     @PostMapping("/guardar")
     public String productoGuardar(Producto producto,
@@ -78,7 +69,7 @@ public class ProductoController {
 
     @GetMapping("/modificar/{idProducto}")
     public String productoModificar(Producto producto, Model model) {
-        producto = categoriaService.getProducto(producto);
+        producto = productoService.getProducto(producto);
         List<Categoria> categorias = categoriaService.getCategorias(true);
         model.addAttribute("categorias",categorias);
         model.addAttribute("producto", producto);
