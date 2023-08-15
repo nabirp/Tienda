@@ -51,7 +51,7 @@ public class ReporteServiceImpl implements ReporteService {
                 estilo = "attachment; ";
             }
 
-            //La ruta dentro de "default package"
+            //La ruta dentro de "default package" es reportes
             String reportePath = "reportes";
             //En salida quedarà el reporte ya generado...
             ByteArrayOutputStream salida = new ByteArrayOutputStream();
